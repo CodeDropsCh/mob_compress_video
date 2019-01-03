@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      var resp = await MobCompressVideo.compress("store/", "")
+      var resp = await MobCompressVideo.getPathTemp();
       platformVersion = resp;
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
